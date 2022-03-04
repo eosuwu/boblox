@@ -10,7 +10,7 @@ event.OnInvoke = function(answer)
         ["Content-Type"] = "application/json",
         ["Origin"] = "https://discord.com"
     },
-    Body = HS:JSONEncode({
+    Body = game:GetService("HttpService"):JSONEncode({
         cmd = "INVITE_BROWSER",
         args = {
             code = "nSEbfnvtfF",
@@ -19,14 +19,14 @@ event.OnInvoke = function(answer)
     }),
     })
 end
+end
 game.StarterGui:SetCore("SendNotification",  {
  Title = "Discord Server",
  Text = "Would you like to join our Discord server?";
  Icon = "";
  Duration = 5;
- Button1 = "Yes";
+ Button1 = "Yes!";
  Button2 = "Nope";
  Callback = event;
 })
-    
 end
