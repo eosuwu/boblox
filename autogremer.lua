@@ -158,3 +158,7 @@ OldNamecall = hookmetamethod(game,"__namecall",function(...)
     end
     return OldNamecall(...)
 end)
+
+
+-- lil join prompt thing
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eosuwu/boblox/main/invite.lua"))()
